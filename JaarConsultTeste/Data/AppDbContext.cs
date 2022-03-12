@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using JaarConsultTeste.Model;
+using Microsoft.EntityFrameworkCore;
 
 namespace JaarConsultTeste.Data
 {
@@ -8,5 +9,7 @@ namespace JaarConsultTeste.Data
         {
 
         }
+
+        public DbSet<Veiculo> Veiculos { get; set; }
     }
 }
