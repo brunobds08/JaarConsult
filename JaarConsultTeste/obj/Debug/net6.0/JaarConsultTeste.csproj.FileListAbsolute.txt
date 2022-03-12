@@ -1,0 +1,7 @@
+C:\Users\bruno\source\repos\JaarConsultTeste\JaarConsultTeste\obj\Debug\net6.0\JaarConsultTeste.csproj.AssemblyReference.cache
+C:\Users\bruno\source\repos\JaarConsultTeste\JaarConsultTeste\obj\Debug\net6.0\JaarConsultTeste.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\bruno\source\repos\JaarConsultTeste\JaarConsultTeste\obj\Debug\net6.0\JaarConsultTeste.AssemblyInfoInputs.cache
+C:\Users\bruno\source\repos\JaarConsultTeste\JaarConsultTeste\obj\Debug\net6.0\JaarConsultTeste.AssemblyInfo.cs
+C:\Users\bruno\source\repos\JaarConsultTeste\JaarConsultTeste\obj\Debug\net6.0\JaarConsultTeste.csproj.CoreCompileInputs.cache
+C:\Users\bruno\source\repos\JaarConsultTeste\JaarConsultTeste\obj\Debug\net6.0\JaarConsultTeste.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\bruno\source\repos\JaarConsultTeste\JaarConsultTeste\obj\Debug\net6.0\JaarConsultTeste.MvcApplicationPartsAssemblyInfo.cache
