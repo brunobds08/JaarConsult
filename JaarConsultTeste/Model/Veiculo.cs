@@ -13,7 +13,10 @@ namespace JaarConsultTeste.Model
         [Required]
         public string CodigoFipe { get; set; }
 
-        [Required(ErrorMessage ="A placa do carro é obrigatória")]
+        [Required]
         public string Placa { get; set; }
+
+        [Required]
+        public int Ano { get; set; }
     }
 }

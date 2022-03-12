@@ -16,30 +16,43 @@ namespace JaarConsultTeste.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> ConsultaFipe([FromBody] GetFipeDto fipeDto)
+        [Route("ConsultaFipe")]
+        public async Task<IActionResult> ConsultaFipe([FromBody] ConsultaFipeDto fipeDto)
         {
             var fipe = await _fipeService.ConsultaFipePorAno(fipeDto);
 
-            
-
-            return Ok(fipe);
-        }
-
-        [HttpPost]
-        [Route("/AdicionarVeiculo")]
-        public IActionResult AdicionaVeiculo([FromBody] CreateFipeDto fipeDto)
-        {
-            _fipeService.AdicionaVeiculo(fipeDto);
-
+            if (fipe != null)
+            {
+                return Ok(fipe);
+            }
             return NoContent();
         }
 
-        [HttpGet]
-        public IActionResult RecuperaVeiculo([FromQuery] string placa)
+        [HttpPost]
+        [Route("AdicionaVeiculo")]
+        public async Task<IActionResult> AdicionaVeiculo([FromBody] CreateVeiculoDto createDto)
         {
-            var veiculoDto = _fipeService.RecuperaVeiculo(placa);
+            GetVeiculoDto veiculoDto = await _fipeService.AdicionaVeiculo(createDto);
 
-            return Ok(veiculoDto);
+            return CreatedAtAction(
+                nameof(RecuperaVeiculoPorPlaca), 
+                new { placa = veiculoDto.Placa }, 
+                veiculoDto);
+        }
+
+        [HttpGet("{placa}")]
+        public async Task<IActionResult> RecuperaVeiculoPorPlaca(string placa)
+        {
+            var veiculoDto = await _fipeService.RecuperaVeiculo(placa);
+
+            if (veiculoDto != null)
+            {
+                return Ok(veiculoDto);
+            }
+            else
+            {
+                return NoContent();
+            }
         }
     }
 }

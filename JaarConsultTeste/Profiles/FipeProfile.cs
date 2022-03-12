@@ -1,4 +1,6 @@
 ﻿using AutoMapper;
+using JaarConsultTeste.Data.Dtos;
+using JaarConsultTeste.Model;
 
 namespace JaarConsultTeste.Profiles
 {
@@ -6,7 +8,9 @@ namespace JaarConsultTeste.Profiles
     {
         public FipeProfile()
         {
-            //CreateMap<ReadiFipeDto, Fipe>();
+            CreateMap<CreateVeiculoDto, Veiculo>();
+            CreateMap<ReadFipeDto, ReadVeiculoDto>();
+            CreateMap<Veiculo, GetVeiculoDto>();
 
         }
     }

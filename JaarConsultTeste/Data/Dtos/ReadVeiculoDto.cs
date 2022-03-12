@@ -11,7 +11,24 @@ namespace JaarConsultTeste.Data.Dtos
         [Required]
         public string CodigoFipe { get; set; }
 
-        [Required(ErrorMessage = "A placa do carro é obrigatória")]
         public string Placa { get; set; }
+
+        public string Valor { get; set; }
+
+        public string Marca { get; set; }
+
+        public string Modelo { get; set; }
+
+        public int AnoModelo { get; set; }
+
+        public string Combustivel { get; set; }
+
+        public string MesReferencia { get; set; }
+
+        public int TipoVeiculo { get; set; }
+
+        public char SiglaCombustivel { get; set; }
+
+        public string DataConsulta { get; set; }
     }
 }

@@ -2,10 +2,10 @@
 
 namespace JaarConsultTeste.Data.Dtos
 {
-    public class GetFipeDto
+    public class ConsultaFipeDto
     {
         [Required]
-        public string codigoFipe { get; set; }
+        public string CodigoFipe { get; set; }
 
         [Required]
         public int Ano { get; set; }
