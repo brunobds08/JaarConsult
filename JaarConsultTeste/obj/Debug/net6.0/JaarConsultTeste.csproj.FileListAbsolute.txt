@@ -61,3 +61,6 @@ C:\Users\bruno\source\repos\JaarConsultTeste\JaarConsultTeste\obj\Debug\net6.0\J
 C:\Users\bruno\source\repos\JaarConsultTeste\JaarConsultTeste\obj\Debug\net6.0\ref\JaarConsultTeste.dll
 C:\Users\bruno\source\repos\JaarConsultTeste\JaarConsultTeste\obj\Debug\net6.0\JaarConsultTeste.pdb
 C:\Users\bruno\source\repos\JaarConsultTeste\JaarConsultTeste\obj\Debug\net6.0\JaarConsultTeste.genruntimeconfig.cache
+C:\Users\bruno\source\repos\JaarConsultTeste\JaarConsultTeste\bin\Debug\net6.0\System.Net.Http.Formatting.dll
+C:\Users\bruno\source\repos\JaarConsultTeste\JaarConsultTeste\bin\Debug\net6.0\Newtonsoft.Json.dll
+C:\Users\bruno\source\repos\JaarConsultTeste\JaarConsultTeste\bin\Debug\net6.0\Newtonsoft.Json.Bson.dll

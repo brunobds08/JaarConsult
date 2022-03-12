@@ -8,19 +8,21 @@ namespace JaarConsultTeste.Services
     {
         AppDbContext _context;
         IMapper _mapper;
+        BrasilAPIService _clientService;
 
         public FipeService(AppDbContext context, IMapper mapper)
         {
             _context = context;
             _mapper = mapper;
+
+            _clientService = new BrasilAPIService();
         }
 
-        internal object ConsultaFipePorAno(ReadFipeDto fipeDto)
+        public async Task<ReadFipeDto> ConsultaFipePorAno(GetFipeDto getFipeDto)
         {
-            throw new NotImplementedException();
-            // Consulta a ApiBrasil
+            var readFipeDto = await _clientService.RecuperaDadosPorFipe(getFipeDto.codigoFipe);
 
-            // filtra os dados por ano
+            return readFipeDto.FirstOrDefault(f => f.AnoModelo == getFipeDto.Ano);
         }
 
         internal void AdicionaVeiculo(CreateFipeDto fipeDto)

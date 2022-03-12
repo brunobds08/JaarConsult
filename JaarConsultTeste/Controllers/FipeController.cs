@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace JaarConsultTeste.Controllers
 {
     [ApiController]
-    [Route("{controller}")]
+    [Route("[controller]")]
     public class FipeController : ControllerBase
     {
         private FipeService _fipeService;
@@ -16,9 +16,12 @@ namespace JaarConsultTeste.Controllers
         }
 
         [HttpPost]
-        public IActionResult ConsultaFipePorAno([FromBody] ReadFipeDto fipeDto)
+        public async Task<IActionResult> ConsultaFipe([FromBody] GetFipeDto fipeDto)
         {
-            var fipe = _fipeService.ConsultaFipePorAno(fipeDto);
+            var fipe = await _fipeService.ConsultaFipePorAno(fipeDto);
+
+            
+
             return Ok(fipe);
         }
 
