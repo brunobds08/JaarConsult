@@ -21,9 +21,13 @@ namespace JaarConsultTeste.Services
 
         public async Task<ReadFipeDto> ConsultaFipePorAno(ConsultaFipeDto consultaFipeDto)
         {
-            var readFipeDto = await _clientService.RecuperaDadosPorFipe(consultaFipeDto.CodigoFipe);
+            var listaFipes = await _clientService.RecuperaDadosPorFipe(consultaFipeDto.CodigoFipe);
 
-            return readFipeDto.FirstOrDefault(f => f.AnoModelo == consultaFipeDto.Ano);
+            var readFipeDto = 
+                listaFipes.FirstOrDefault(f => f.AnoModelo == consultaFipeDto.Ano);
+            readFipeDto.Ano = consultaFipeDto.Ano;
+
+            return readFipeDto;
         }
 
         public async Task<GetVeiculoDto> AdicionaVeiculo(CreateVeiculoDto veiculoDto)

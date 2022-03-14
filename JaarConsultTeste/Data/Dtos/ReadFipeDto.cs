@@ -6,6 +6,8 @@
 
         public string Marca { get; set; }
 
+        public int Ano { get; set; }
+
         public string Modelo { get; set; }
 
         public int AnoModelo { get; set; }
