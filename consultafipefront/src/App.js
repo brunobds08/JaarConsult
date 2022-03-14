@@ -74,13 +74,21 @@ export default function App() {
         event.preventDefault();
         setMensagemErro('');
 
-        try {
-            const response = await
-                brasilapi.get('Fipe/' + placa)
-                .then(response => { setFipe(response.data) });
+        if (placa != '')
+        {
+            try {
+                const response = await
+                    brasilapi.get('Fipe/' + placa)
+                    .then(response => { setFipe(response.data) });
+            }
+            catch (error) {
+                setMensagemErro('Houve um erro ao tentar encontrar o veículo');
+            }
         }
-        catch (error) {
-            setMensagemErro('Nenhum veículo encontrado')
+        else{
+            setFipe([]);
+        setMensagemErro('');
+        setMensagemSucesso('');
         }
     }
 
